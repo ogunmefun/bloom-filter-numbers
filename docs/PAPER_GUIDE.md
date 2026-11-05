@@ -13,7 +13,7 @@ Work in these shared originals so everyone sees the latest version. Linking a fi
 | Renee | Data and experiment method | 4–6 |
 | Jacob | Results, analysis, and conclusion | 7–9 |
 
-Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Renee handles final paper formatting; Jacob handles final slide formatting. Export final DOCX/PDF and PPTX/PDF copies to the repository for submission.
+Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Dem combines all code, paper sections, and slides and handles final testing and submission exports. Jacob owns the last paper section and slides, so he formats the completed paper and presentation consistently after Dem combines them. Each author supplies their own content and fixes requested corrections.
 
 
 Target 6–7 single-spaced pages total; maximum 8. Use a short title block instead of a separate cover page. Include all three names. Keep figures and references inside the limit.
@@ -44,4 +44,4 @@ Optional extension only: compare observed rate with the approximation (1 - exp(-
 
 ## Assembly
 
-Each author sends their section and citations to Renee. Renee combines and formats; authors fix their own content after review. Save the final DOCX and PDF in paper/. Check page count in the exported PDF. Use one consistent citation style and cite factual sources, reused illustrations, and any borrowed code. Keep raw results in results/ so claims can be checked.
+Each author completes their section and citations in the shared Google Doc. Dem combines the sections. Jacob, as the final-section owner, standardizes headings, font, spacing, captions, and references and checks the 8-page limit. Authors fix their own content after review. Dem handles final checks and exports. Save the final DOCX and PDF in paper/. Check page count in the exported PDF. Use one consistent citation style and cite factual sources, reused illustrations, and any borrowed code. Keep raw results in results/ so claims can be checked.
