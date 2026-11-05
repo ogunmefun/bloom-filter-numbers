@@ -13,7 +13,7 @@ Work in these shared originals so everyone sees the latest version. Linking a fi
 | Renee | Data and experiment method | 4–6 |
 | Jacob | Results, analysis, and conclusion | 7–9 |
 
-Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Renee handles final paper formatting; Jacob handles final slide formatting. Export final DOCX/PDF and PPTX/PDF copies to the repository for submission.
+Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Dem combines all code, paper sections, and slides and handles final testing and submission exports. Jacob owns the last paper section and slides, so he formats the completed paper and presentation consistently after Dem combines them. Each author supplies their own content and fixes requested corrections.
 
 
 Create 9 slides total. Everyone makes 3 slides and speaks for about 4 minutes. Target 12 minutes including the demo; maximum 15 minutes.
@@ -32,7 +32,7 @@ Create 9 slides total. Everyone makes 3 slides and speaks for about 4 minutes. T
 
 Use short bullets, readable text, and one consistent theme. Add source citations near borrowed facts or visuals. Put explanations in speaker notes, not crowded paragraphs.
 
-Renee's 4 minutes includes the live demo. Keep a saved output or screenshot ready in case it fails. Jacob assembles the final deck from everyone's slides; each author checks their own slides after assembly.
+Renee's 4 minutes includes the live demo. Keep a saved output or screenshot ready in case it fails. Dem combines everyone's slides. Jacob, as the owner of slides 7–9, standardizes the theme, fonts, spacing, labels, and citations across the completed deck. Each author checks their own content; Dem handles final testing and exports.
 
 Rehearse together and time the entire talk. Everyone should answer: What does a positive mean? Why are false negatives absent in a correct insertion-only filter? How did we confirm a number was absent? What did our timing actually show?
 
