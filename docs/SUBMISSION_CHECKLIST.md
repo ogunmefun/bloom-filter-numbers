@@ -13,7 +13,7 @@ Work in these shared originals so everyone sees the latest version. Linking a fi
 | Renee | Data and experiment method | 4–6 |
 | Jacob | Results, analysis, and conclusion | 7–9 |
 
-Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Renee handles final paper formatting; Jacob handles final slide formatting. Export final DOCX/PDF and PPTX/PDF copies to the repository for submission.
+Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Dem combines all code, paper sections, and slides and handles final testing and submission exports. Jacob owns the last paper section and slides, so he formats the completed paper and presentation consistently after Dem combines them. Each author supplies their own content and fixes requested corrections.
 
 
 ## Before starting
@@ -34,7 +34,7 @@ Edit your assigned sections/slides. Use comments or suggestions for a teammate's
 - [ ] Save reproducible results, seeds, timing methodology, and false-positive counts.
 - [ ] Run successfully from a fresh download; include the required code listing.
 
-## Paper — Renee checks, everyone writes
+## Paper — Dem combines and checks, Jacob formats, everyone writes
 
 - [ ] Present algorithm, study, results, and analysis.
 - [ ] Include actual measured results and appropriate citations.
@@ -42,7 +42,7 @@ Edit your assigned sections/slides. Use comments or suggestions for a teammate's
 - [ ] Check DOCX and exported PDF; no more than 8 single-spaced pages.
 - [ ] All three members review the final version.
 
-## Presentation — Jacob checks, everyone presents
+## Presentation — Dem combines and tests, Jacob formats, everyone presents
 
 - [ ] All three members have 3 slides and about 4 minutes each.
 - [ ] Show the algorithm, demo, measured results, and conclusions.
