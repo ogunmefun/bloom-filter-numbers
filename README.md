@@ -75,7 +75,19 @@ Dependencies: agree on the interfaces in #1 and #2 first. Renee can build data g
 - `paper/Bloom_Filter_Paper.docx` and PDF — final paper.
 - `slides/Bloom_Filter_Presentation.pptx` and PDF — final slides.
 
-Once implemented, intended run commands are `python demo.py` and `python experiments.py`. These commands are a target interface, not a claim that code already exists.
+Run from the repository directory using Python 3 (no extra packages):
+
+```sh
+python -m unittest discover -s tests -v
+python demo.py
+python experiments.py
+```
+
+`bloom_filter.py` provides the shared `BloomFilter(m=8000, k=3)` class with salted SHA-256 hashing. Renee's demo uses this class. Jacob's timing and false-positive checks now live in `experiments.py`, which uses Renee's generator and writes `results/results.csv` for all 18 planned configurations. It checks every distinct inserted number for false negatives and every absent number in the range for false positives.
+
+CSV rates are fractions (multiply by 100 for percentages). Build time includes filter initialization and insertion. Lookup times are seconds per query over 20 batches of the same 1,001 shuffled queries for Bloom and list membership. Printing and file writes are outside timing. An empty absent-query set produces a blank rate. Timings vary by machine; the CSV is one local run, not a universal speed claim.
+
+The November 15 measurements from the separate arithmetic-hash implementation are historical and are superseded by this CSV. Jacob's paper draft is preserved, but its hash description, configuration, and measurements need reconciliation with the restored implementation before submission. The filter uses one byte per logical bit, not packed bits.
 
 ## Rubric requirements
 
@@ -88,3 +100,4 @@ Based on the supplied COSC 428/528 Fall 2026 project sheet:
 - All members receive the same grade; classmates score the talk.
 
 Our targets are 6–7 pages total and a 12-minute talk, leaving margin. The rubric does not supply a deadline or citation style; agree on these with the instructor.
+
