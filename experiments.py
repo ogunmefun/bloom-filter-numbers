@@ -3,6 +3,7 @@
 Run: python experiments.py
 Times are seconds; lookup times are per query over 20 repeated batches.
 """
+import argparse
 import csv
 from pathlib import Path
 import random
@@ -21,6 +22,8 @@ def measure_lookup(lookup, queries, repeats):
 
 
 def run_case(count, seed, m, k=3, repeats=20):
+    if type(repeats) is not int:
+        raise TypeError("repeats must be an integer")
     if repeats <= 0:
         raise ValueError("repeats must be positive")
     numbers = generate_numbers(count, seed)
@@ -50,12 +53,14 @@ def run_case(count, seed, m, k=3, repeats=20):
     }
 
 
-def main():
+def main(output_dir=None):
     rows = [run_case(count, seed, m)
             for count in (250, 500, 1000)
             for seed in (42, 43, 44)
             for m in (2000, 8000)]
-    destination = Path(__file__).resolve().parent / "results" / "results.csv"
+    output_dir = (Path(output_dir) if output_dir is not None
+                  else Path(__file__).resolve().parent / "results")
+    destination = output_dir / "results.csv"
     destination.parent.mkdir(parents=True, exist_ok=True)
     with destination.open("w", newline="", encoding="utf-8") as output:
         writer = csv.DictWriter(output, fieldnames=list(rows[0]))
@@ -72,4 +77,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Run all 18 experiment configurations.")
+    parser.add_argument("--output-dir", help="Directory for the measured CSV")
+    main(parser.parse_args().output_dir)

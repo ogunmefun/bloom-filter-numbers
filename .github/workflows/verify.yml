@@ -1,0 +1,46 @@
+name: Verify Bloom filter
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+      - 'results/results.csv'
+      - '.github/workflows/verify.yml'
+  pull_request:
+    paths:
+      - '**.py'
+      - 'results/results.csv'
+      - '.github/workflows/verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run correctness and end-to-end tests
+        run: python -m unittest discover -s tests -v
+      - name: Run demo and all 18 configurations
+        run: |
+          python demo.py --output-dir "$RUNNER_TEMP/bloom-results"
+          python experiments.py --output-dir "$RUNNER_TEMP/bloom-results"
+          python -c "import json, platform, sys; from pathlib import Path; Path(sys.argv[1]).write_text(json.dumps({'python': sys.version, 'platform': platform.platform()}, indent=2))" "$RUNNER_TEMP/bloom-results/environment.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: bloom-results-python-${{ matrix.python-version }}
+          path: ${{ runner.temp }}/bloom-results
+          retention-days: 30
+          if-no-files-found: error

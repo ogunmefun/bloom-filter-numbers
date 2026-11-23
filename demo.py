@@ -1,3 +1,4 @@
+import argparse
 from pathlib import Path
 import random
 
@@ -6,11 +7,15 @@ from bloom_filter import BloomFilter
 
 def generate_numbers(count=1000, seed=42):
     """Generate random integers from 2000 through 3000, allowing duplicates."""
+    if type(count) is not int:
+        raise TypeError("count must be an integer")
+    if count < 0:
+        raise ValueError("count must not be negative")
     rng = random.Random(seed)
     return [rng.randint(2000, 3000) for _ in range(count)]
 
 
-def main():
+def main(output_dir=None):
     # Generate the numbers and keep the original list, including duplicates.
     numbers = generate_numbers()
     unique_numbers = set(numbers)
@@ -63,7 +68,8 @@ def main():
     print(output_text)
 
     # Create the results folder if it does not already exist.
-    results_folder = Path("results")
+    results_folder = (Path(output_dir) if output_dir is not None
+                      else Path(__file__).resolve().parent / "results")
     results_folder.mkdir(parents=True, exist_ok=True)
 
     # Save all generated numbers, preserving duplicates and their order.
@@ -79,4 +85,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Run the number-search demo.")
+    parser.add_argument("--output-dir", help="Directory for generated demo files")
+    main(parser.parse_args().output_dir)
