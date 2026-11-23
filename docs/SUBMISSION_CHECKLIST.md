@@ -9,9 +9,9 @@ Work in these shared originals so everyone sees the latest version. Linking a fi
 
 | Member | Paper sections | Slides |
 |---|---|---|
-| Dem | Introduction and algorithm | 1–3 |
-| Renee | Data and experiment method | 4–6 |
-| Jacob | Results, analysis, and conclusion | 7–9 |
+| Dem | Introduction and algorithm | 1–4 |
+| Renee | Data and experiment method | 5–7 |
+| Jacob | Results, analysis, and conclusion | 8–10 |
 
 Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Dem combines all code, paper sections, and slides and handles final testing and submission exports. Jacob owns the last paper section and slides, so he formats the completed paper and presentation consistently after Dem combines them. Each author supplies their own content and fixes requested corrections.
 
@@ -44,7 +44,7 @@ Edit your assigned sections/slides. Use comments or suggestions for a teammate's
 
 ## Presentation — Dem combines and tests, Jacob formats, everyone presents
 
-- [ ] All three members have 3 slides and about 4 minutes each.
+- [ ] The deck has 10 slides: Dem 1–4 (including the introduction), Renee 5–7, and Jacob 8–10. Everyone has completed their assigned content and speaking notes.
 - [ ] Show the algorithm, demo, measured results, and conclusions.
 - [ ] Include the PowerPoint and PDF backup.
 - [ ] Verify slides match the paper and raw results.
