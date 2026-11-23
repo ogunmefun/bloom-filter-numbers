@@ -1,5 +1,9 @@
 # Final submission checklist
 
+**Team deadline: Sunday, November 29, 2026, by 11:59 p.m. Eastern Time.** This is the team's completion deadline; follow any separate instructor submission requirements.
+
+Complete [your individual checklist](NEXT_STEPS.md) and follow the [code freeze](CODE_FREEZE.md).
+
 ## Shared editing workspaces
 
 - [Open the shared paper in Google Docs](https://docs.google.com/document/d/1n6r_RNnZF4_JKkvL_ajq9tNtQcpMoi3ajJ07_u9zYlE/edit)

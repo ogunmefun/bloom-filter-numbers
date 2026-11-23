@@ -1,5 +1,13 @@
 # Bloom Filter: Searching for Numbers
 
+## Deadline and code freeze
+
+**Team completion deadline: Sunday, November 29, 2026, by 11:59 p.m. Eastern Time.**
+
+**Start with [your next-step checklist](docs/NEXT_STEPS.md).** Dem handles combining/final testing, Renee finishes methods and slides 5–7, and Jacob finishes analysis/charts and slides 8–10. Dem's slides are 1–4. The deck has 10 slides.
+
+The code passed [GitHub Actions on Python 3.12 and 3.13](https://github.com/ogunmefun/bloom-filter-numbers/actions/runs/45093952786) and is now under a [team code freeze](docs/CODE_FREEZE.md). Use the [tested snapshot](https://github.com/ogunmefun/bloom-filter-numbers/tree/code-freeze-2026-11-22). Keep code and canonical results unchanged unless Dem coordinates a confirmed bug fix and revalidation.
+
 ## Shared editing workspaces
 
 - [Open the shared paper in Google Docs](https://docs.google.com/document/d/1n6r_RNnZF4_JKkvL_ajq9tNtQcpMoi3ajJ07_u9zYlE/edit)
@@ -47,7 +55,7 @@ Dem's slides 1–4 contain presentation content. Slides 5–10 are designed temp
 
 The presentation now has 10 slides, including a new introduction at the beginning. Dem owns slides 1–4; Renee owns slides 5–7; Jacob owns slides 8–10. Each person still owns 3 issues and about 2 pages of writing. Allow about 4–5 minutes for Dem and adjust the group rehearsal toward 12 minutes total, never more than 15. Dem has chosen to take on the additional combining and final testing. Jacob handles formatting because he owns the final paper section and slides. Time estimates are approximate. Review cycle: Dem reviews Renee, Renee reviews Jacob, Jacob reviews Dem.
 
-Dem is assigned through the known GitHub account ogunmefun. Renee and Jacob are named in their issue titles/bodies; their GitHub usernames have not been provided.
+GitHub accounts: Dem is @ogunmefun, Renee is @renengobii, and Jacob is @JecoForcer.
 
 ## Three simple sprints
 
