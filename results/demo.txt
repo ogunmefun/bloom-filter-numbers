@@ -1,16 +1,11 @@
+Total generated numbers: 1000
+Unique numbers: 637
+
 Search for a present number: 2654
-Bloom filter: True
+Exact membership: True
+Bloom filter: True (possibly present)
 
 Search for an absent number: 2004
-Bloom filter: False
-Number correctly identified as absent.
-
---- Performance Results ---
-Present lookup: 0.000000563 seconds
-Absent lookup:  0.000000782 seconds
-
---- False Positive Analysis ---
-Absent numbers tested: 364
-False positives: 2
-False positive rate: 0.55%
-Note: other hash functions can set overlapping bit positions.
+Exact membership: False
+Bloom filter: False (definitely absent)
+No false positive for this absent-number query.
