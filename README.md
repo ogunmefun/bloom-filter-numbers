@@ -9,9 +9,9 @@ Work in these shared originals so everyone sees the latest version. Linking a fi
 
 | Member | Paper sections | Slides |
 |---|---|---|
-| Dem | Introduction and algorithm | 1–3 |
-| Renee | Data and experiment method | 4–6 |
-| Jacob | Results, analysis, and conclusion | 7–9 |
+| Dem | Introduction and algorithm | 1–4 |
+| Renee | Data and experiment method | 5–7 |
+| Jacob | Results, analysis, and conclusion | 8–10 |
 
 Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Dem combines all code, paper sections, and slides and handles final testing and submission exports. Jacob owns the last paper section and slides, so he formats the completed paper and presentation consistently after Dem combines them. Each author supplies their own content and fixes requested corrections.
 
@@ -35,15 +35,17 @@ A Bloom filter answers **possibly present** or **definitely absent**. It does no
 
 Use Python 3 and standard-library modules to keep setup simple. Default filter: m=8000 positions and k=3 hashes. Duplicates are allowed: 1,000 draws do not mean 1,000 distinct numbers.
 
+Dem's slides 1–4 contain presentation content. Slides 5–10 are designed templates for Renee and Jacob to complete using the instructions in their speaker notes.
+
 ## Work split
 
 | Member | Sprint 1: build (~3 hours) | Sprint 2: paper (~2 hours) | Sprint 3: present and finalize |
 |---|---|---|---|
-| Dem | [#1 Filter and hashes](../../issues/1) | [#4 Introduction and algorithm](../../issues/4) | [#7 Slides 1–3, combining, and final testing](../../issues/7) |
-| Renee | [#2 Data and demo](../../issues/2) | [#5 Method](../../issues/5) | [#8 Slides 4–6 and demo](../../issues/8) |
-| Jacob | [#3 Tests and measurements](../../issues/3) | [#6 Results and paper formatting](../../issues/6) | [#9 Slides 7–9 and formatting](../../issues/9) |
+| Dem | [#1 Filter and hashes](../../issues/1) | [#4 Introduction and algorithm](../../issues/4) | [#7 Slides 1–4, combining, and final testing](../../issues/7) |
+| Renee | [#2 Data and demo](../../issues/2) | [#5 Method](../../issues/5) | [#8 Slides 5–7 and demo](../../issues/8) |
+| Jacob | [#3 Tests and measurements](../../issues/3) | [#6 Results and paper formatting](../../issues/6) | [#9 Slides 8–10 and formatting](../../issues/9) |
 
-Each person owns 3 issues, about 2 pages of writing, 3 slides, and about 4 minutes of speaking. Dem has chosen to take on the additional combining and final testing. Jacob handles formatting because he owns the final paper section and slides. Time estimates are approximate. Review cycle: Dem reviews Renee, Renee reviews Jacob, Jacob reviews Dem.
+The presentation now has 10 slides, including a new introduction at the beginning. Dem owns slides 1–4; Renee owns slides 5–7; Jacob owns slides 8–10. Each person still owns 3 issues and about 2 pages of writing. Allow about 4–5 minutes for Dem and adjust the group rehearsal toward 12 minutes total, never more than 15. Dem has chosen to take on the additional combining and final testing. Jacob handles formatting because he owns the final paper section and slides. Time estimates are approximate. Review cycle: Dem reviews Renee, Renee reviews Jacob, Jacob reviews Dem.
 
 Dem is assigned through the known GitHub account ogunmefun. Renee and Jacob are named in their issue titles/bodies; their GitHub usernames have not been provided.
 
