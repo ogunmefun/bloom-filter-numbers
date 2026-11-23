@@ -9,31 +9,34 @@ Work in these shared originals so everyone sees the latest version. Linking a fi
 
 | Member | Paper sections | Slides |
 |---|---|---|
-| Dem | Introduction and algorithm | 1–3 |
-| Renee | Data and experiment method | 4–6 |
-| Jacob | Results, analysis, and conclusion | 7–9 |
+| Dem | Introduction and algorithm | 1–4 |
+| Renee | Data and experiment method | 5–7 |
+| Jacob | Results, analysis, and conclusion | 8–10 |
 
 Edit your assigned sections/slides. Use comments or suggestions for a teammate's work. Keep the existing issue checklists as the task instructions. Dem combines all code, paper sections, and slides and handles final testing and submission exports. Jacob owns the last paper section and slides, so he formats the completed paper and presentation consistently after Dem combines them. Each author supplies their own content and fixes requested corrections.
 
 
-Create 9 slides total. Everyone makes 3 slides and speaks for about 4 minutes. Target 12 minutes including the demo; maximum 15 minutes.
+The shared deck now has **10 slides**, with an introduction at the beginning. Dem owns 4 slides; Renee and Jacob own 3 each. Target about 12 minutes including the demo; maximum 15 minutes. Allow about 4–5 minutes for Dem and adjust the remaining speaking time during rehearsal.
 
 | Slide | Owner | Put on the slide |
 |---|---|---|
-| 1 | Dem | Title, all names, and the number-search goal |
-| 2 | Dem | Simple bit-array diagram showing hashes setting positions |
-| 3 | Dem | Insert/query steps; possibly present vs definitely absent |
-| 4 | Renee | 1,000 draws, inclusive range, duplicates, seed, test setup |
-| 5 | Renee | Actual known-present query and output |
-| 6 | Renee | Actual known-absent query and output; explain a false positive if one occurs |
-| 7 | Jacob | One readable timing chart or table with units |
-| 8 | Jacob | Observed false-positive results and filter-size tradeoff |
-| 9 | Jacob | Main conclusion, limitations, and concise references |
+| 1 | Dem | Introduction: title, team, number-search goal, experiment overview |
+| 2 | Dem | What the filter stores: membership, draws versus distinct values, array and symbols |
+| 3 | Dem | Hashing, insertion, search, time complexity and actual storage |
+| 4 | Dem | Worked bit-array example, false positives and why false negatives do not occur |
+| 5 | Renee | Data and experiment setup: range, duplicates, seed and tested configurations |
+| 6 | Renee | Actual known-present query and verified output |
+| 7 | Renee | Actual known-absent query and output; explain a false positive if one occurs |
+| 8 | Jacob | Measured lookup performance chart with units |
+| 9 | Jacob | False-positive results and filter-size comparison |
+| 10 | Jacob | Conclusions, limitations and references |
 
-Use short bullets, readable text, and one consistent theme. Add source citations near borrowed facts or visuals. Put explanations in speaker notes, not crowded paragraphs.
+Dem's four slides contain presentation content and plain-English explanations of the mathematics. Renee's and Jacob's slides are **templates only**: each owner must add their own content and measured evidence. Speaker notes contain slide-specific instructions, source files and speaking guidance.
 
-Renee's 4 minutes includes the live demo. Keep a saved output or screenshot ready in case it fails. Dem combines everyone's slides. Jacob, as the owner of slides 7–9, standardizes the theme, fonts, spacing, labels, and citations across the completed deck. Each author checks their own content; Dem handles final testing and exports.
+Keep the shared navy, white and teal design. Explain mathematical symbols in English so the audience can follow the slide. Use readable text and concise sentences. Keep detailed guidance in speaker notes and replace template instructions before presenting.
+
+Renee's speaking time includes the live demo; keep saved output or a screenshot ready. Jacob uses the current `results/results.csv` and the restored shared filter, not older arithmetic-hash measurements. Dem combines everyone's work and handles final testing and exports. Jacob formats the completed deck consistently.
 
 Rehearse together and time the entire talk. Everyone should answer: What does a positive mean? Why are false negatives absent in a correct insertion-only filter? How did we confirm a number was absent? What did our timing actually show?
 
-Save slides/Bloom_Filter_Presentation.pptx and a PDF backup. These are instructions for the team to create the deck; no measured results have been supplied yet.
+Save slides/Bloom_Filter_Presentation.pptx and a PDF backup. The shared deck is the working copy. Complete the templates and verify all reported values against the final CSV before exporting.
