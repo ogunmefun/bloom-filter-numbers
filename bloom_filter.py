@@ -1,92 +1,58 @@
-import time
-import random
+"""Insertion-only integer Bloom filter. True means possibly present."""
+from hashlib import sha256
 
-# Generate 1,000 numbers between 2000 and 3000.
-random.seed(42)
-numbers = [random.randint(2000, 3000) for _ in range(1000)]
 
-# Bloom filter configuration
-SIZE = 10007
-bits = [0] * SIZE
+class BloomFilter:
+    """Use one byte per logical bit for readability, not packed storage."""
 
-# Three hash functions
-def hash_positions(number):
-    return [
-        number % SIZE,
-        (number * 31 + 7) % SIZE,
-        (number * 131 + 17) % SIZE
-    ]
+    def __init__(self, m=8000, k=3):
+        for name, value in (("m", m), ("k", k)):
+            if type(value) is not int:
+                raise TypeError(f"{name} must be an integer")
+            if value <= 0:
+                raise ValueError(f"{name} must be positive")
+        self._m, self._k = m, k
+        self._bits = bytearray(m)
 
-# Insert a number into the Bloom filter
+    @property
+    def m(self):
+        return self._m
+
+    @property
+    def k(self):
+        return self._k
+
+    def hash_positions(self, number):
+        """The same integer and configuration always give the same positions."""
+        if type(number) is not int:
+            raise TypeError("number must be an integer")
+        return tuple(
+            int.from_bytes(sha256(f"{salt}:{number}".encode("ascii")).digest(), "big") % self.m
+            for salt in range(self.k)
+        )
+
+    def add(self, number):
+        """Set positions to one; repeated insertion is harmless."""
+        for position in self.hash_positions(number):
+            self._bits[position] = 1
+
+    def contains(self, number):
+        """True: possibly present. False: definitely absent."""
+        return all(self._bits[p] for p in self.hash_positions(number))
+
+
+# Backward compatibility for Renee's existing demo. No data is inserted and
+# nothing is printed on import. Use separate instances for experiments.
+_default_filter = BloomFilter()
+
+
 def insert(number):
-    for position in hash_positions(number):
-        bits[position] = 1
+    _default_filter.add(number)
 
-# Check whether a number might be present
+
 def search(number):
-    return all(bits[position] == 1
-               for position in hash_positions(number))
-
-# Insert all generated numbers
-for number in numbers:
-    insert(number)
-
-# Choose one present number
-present = numbers[0]
-
-# Choose one absent number
-missing = sorted(set(range(2000, 3001)) - set(numbers))
-absent = missing[0]
-
-# Perform the searches
-print("Total generated numbers:", len(numbers))
-print("Unique numbers:", len(set(numbers)))
-
-print("\nSearch for a present number:", present)
-print("Bloom filter:", search(present))
-
-print("\nSearch for an absent number:", absent)
-print("Bloom filter:", search(absent))
-
-if search(absent):
-    print("False positive detected!")
-else:
-    print("Number correctly identified as absent.")
-
-# Measure average lookup time over repeated searches
-REPEATS = 100000
-
-start = time.perf_counter()
-
-for _ in range(REPEATS):
-    search(present)
-
-end = time.perf_counter()
-
-average_present = (end - start) / REPEATS
-
-start = time.perf_counter()
-
-for _ in range(REPEATS):
-    search(absent)
-
-end = time.perf_counter()
-
-average_absent = (end - start) / REPEATS
-
-print("\n--- Performance Results ---")
-print(f"Present lookup: {average_present:.9f} seconds")
-print(f"Absent lookup:  {average_absent:.9f} seconds")
+    return _default_filter.contains(number)
 
 
-# Check all absent numbers in the allowed range for false positives
-actual_numbers = set(numbers)
-absent_numbers = [n for n in range(2000, 3001) if n not in actual_numbers]
-false_positives = sum(search(n) for n in absent_numbers)
-false_positive_rate = false_positives / len(absent_numbers) if absent_numbers else 0
-
-print("\n--- False Positive Analysis ---")
-print("Absent numbers tested:", len(absent_numbers))
-print("False positives:", false_positives)
-print(f"False positive rate: {false_positive_rate:.2%}")
-print("Note: other hash functions can set overlapping bit positions.")
+def hash_positions(number):
+    return _default_filter.hash_positions(number)
